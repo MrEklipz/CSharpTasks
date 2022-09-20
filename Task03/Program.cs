@@ -16,8 +16,9 @@ namespace Task03
         {
             int max1 = 0;
             int max2 = 0;
+            bool isNotZero = true;
 
-            while (true)
+            while (isNotZero)
             {
                 Console.Write("Введите натуральное число (введите 0 для окончания ввода): ");
                 int num = Convert.ToInt32(Console.ReadLine());
@@ -37,7 +38,7 @@ namespace Task03
                     max2 = num;
                 }
 
-                if (num == 0) break;
+                isNotZero = num != 0;
 
             }
             Console.WriteLine(max2);

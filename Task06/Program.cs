@@ -28,15 +28,11 @@ namespace Task06
 
         static void CanHorseMoveHere(int x1, int y1, int x2, int y2)
         {
-            if (((x1 - x2 == 1) | (x1 - x2 == -1)) & ((y1 - y2 == 2) | (y1 - y2 == -2)))
-            {
+            if ((Math.Abs(x1 - x2) == 1 && Math.Abs(y1 - y2) == 2) || 
+                (Math.Abs(x1 - x2) == 2 && Math.Abs(y1 - y2) == 1))
                 Console.WriteLine("YES");
-            }
-            else if (((x1 - x2 == 2) | (x1 - x2 == -2)) & ((y1 - y2 == 1) | (y1 - y2 == -1)))
-            {
-                Console.WriteLine("YES");
-            }
-            else Console.WriteLine("NO");
+            else
+                Console.WriteLine("NO");
         }
     }
 }

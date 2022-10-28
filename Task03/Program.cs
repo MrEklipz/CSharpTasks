@@ -16,15 +16,16 @@ namespace Task03
         {
             int max1 = 0;
             int max2 = 0;
-            bool isNotZero = true;
+            int num;
 
-            while (isNotZero)
+            do 
             {
-                Console.Write("Введите натуральное число (введите 0 для окончания ввода): ");
-                int num = Convert.ToInt32(Console.ReadLine());
-                if (num < 0) 
+                Console.WriteLine("Введите натуральное число(введите 0 для окончания ввода): ");
+                num = Convert.ToInt32(Console.ReadLine());
+
+                if (num < 0)
                 {
-                    Console.WriteLine("Введите натуральное число");
+                    Console.WriteLine("Ошибка! Нужно ввести натуральное число!");
                     continue;
                 }
 
@@ -37,10 +38,9 @@ namespace Task03
                 {
                     max2 = num;
                 }
-
-                isNotZero = num != 0;
-
             }
+            while (num != 0);
+
             Console.WriteLine(max2);
         }
     }
